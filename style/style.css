@@ -13,19 +13,6 @@ body {
     height: 100vh;
 }
 
-/* .cabecalho {
-    display: flex;
-    margin: 2% 4%;
-}
-
-.cabecalho__figuras {
-    width: 5%;
-}
-
-.cabecalho__figuras__logo {
-    width: 35%;
-} */
-
 .conteudo {
     display: flex;
     justify-content: space-between;
@@ -40,7 +27,7 @@ body {
 }
 
 .conteudo__figuras__logo {
-    width: 60%;
+    width: 20px;
 }
 
 .conteudo__criptografia {
@@ -48,13 +35,16 @@ body {
     flex-direction: column;
     justify-content: space-between;
     padding-top: 7%;
+    padding-bottom: 2%;
     width: 60%;
     height: auto;
 }
 
-.conteudo__criptografia__caixa {
-    background-color: var(--cor-primaria);
-    border: 0;
+#conteudo__criptografia__caixa {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    height: 70%;
     color: var(--cor-secundaria);
     font-family: 'Inter', sans-serif;
     font-size: 2rem;
@@ -84,18 +74,20 @@ body {
 }
 
 .conteudo__criptografia__info__button__crip {
+    cursor: pointer;
     background-color: var(--cor-secundaria);
     color: white;
-    width: 320px;
+    width: 100%;
     height: 67px;
     border: none;
     border-radius: 24px;
 }
 
 .conteudo__criptografia__info__button__decrip {
+    cursor: pointer;
     background-color: #D8DFE8;
     color: var(--cor-secundaria);
-    width: 320px;
+    width: 100%;
     height: 67px;
     border-width: 1px;
     border-radius: 24px;
@@ -115,11 +107,11 @@ body {
     border-radius: 30px;
 }
 
-.conteudo__mostra__imagem {
+#conteudo__mostra__imagem {
     width: 80%;
 }
 
-.conteudo__mostra__info {
+#conteudo__mostra__info {
     display: flex;
     flex-direction: column;
     text-align: center;
@@ -139,4 +131,68 @@ body {
     justify-content: center;
     color: #495057;
     font-size: 1rem;
+}
+
+#conteudo__mostra__alt {
+    display: none;
+    height: 90%;
+    width: 80%;
+    flex-direction: column;
+    justify-content: space-between;
+
+}
+
+#conteudo__mostra__resultado {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    overflow: hidden;
+    font-family: 'Inter', sans-serif;
+    height: 70%;
+    font-size: 1.5rem;
+    color: #495057;
+}
+
+#conteudo__mostra__copiar {
+    cursor: pointer;
+    background-color: transparent;
+    font-size: 1rem;
+    font-family: 'Inter', sans-serif;
+    color: var(--cor-secundaria);
+    height: 67px;
+    border-width: 1px;
+    border-radius: 24px;
+    border-color: var(--cor-secundaria);
+}
+
+@media screen and (max-width: 768px) {
+
+    .conteudo {
+        flex-direction: column;
+        padding-bottom: 5%;
+        gap: 20px;
+        height: auto;
+    }
+    #conteudo__mostra__imagem {
+        display: none;
+    }
+    .conteudo__criptografia {
+        margin: 0;
+        padding: 0%;
+        width: auto;
+    }
+    #conteudo__criptografia__caixa {
+        height: 300px;
+    }
+    .conteudo__mostra {
+        width: 96%;
+        height: 600px;
+        padding: 5% 2%;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .conteudo__criptografia__info__button {
+        flex-direction: column;
+    }
 }
